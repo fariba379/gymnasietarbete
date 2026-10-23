@@ -6,18 +6,24 @@ box-sizing: border-box;
 font-family: 'Poppins', sans-serif;
 }
 body {
-display: flex;
-justify-content: center;
-align-items: center;
-min-height: 100vh;
-background-color: #070707;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+   background-image: url("../bild/Mercedes AMG 1.jpeg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .warpper  {
     position: relative;
-    width: 420px;
+    width: 400px;
     height: 500px;
-    background: rgb(2, 255, 200);
+    background: rgba(202, 110, 110, 0.531);
+    box-shadow: 0 0 50px rgb(112, 23, 23);
     border-radius: 20px;
     padding: 40px;
 }
@@ -31,8 +37,12 @@ background-color: #070707;
 }
 h2{
     font-size: 30px;
-    color: #3a4623;
+    color: #eff0ec;
     text-align: center;
+    margin: 0;
+    padding: 10px;
+    font-family: 'Times New Roman', Times, serif;
+   
 }
 .input-group{
     position: relative;
@@ -47,6 +57,7 @@ h2{
     font-size: 16px;
     color: #fff;
     pointer-events: none;
+    transition: .5s;
 }
 .input-group input{
     width: 320px;
@@ -58,6 +69,12 @@ h2{
     border: none;
     outline: none;
 }
+.input-group input:focus ~ label,
+.input-group input:valid ~ label {
+    top: -5px;
+}
+
+
 .remember{
     margin: -5px 0 15px 5px;
 }
@@ -68,9 +85,49 @@ h2{
 
 }
 .remember label input{
-    
+  accent-color: rgb(60, 22, 22);
 }
 
+button {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    background: rgb(73, 14, 14);
+    box-shadow: 0 0 10px rgb(66, 12, 12);
+    font-size: 16px;
+    color: #faf6f6;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+}
+
+.signUp-link {
+    font-size: 14px;
+    text-align: center;
+    margin: 15px;
+}
+
+.signUp-link p {
+    color: #fff;
+}
+
+.signUp-link p a {
+    color: rgb(247, 196, 196);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.signUp-link a {
+    font-size: 1em;
+    color: rgb(62, 28, 28);
+    text-decoration: none;
+    font-weight: 600;
+}
+.signUpBtn-link:hover {
+    text-decoration: underline;
+}
 
 
 

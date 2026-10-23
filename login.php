@@ -9,30 +9,41 @@
 </head>
 <body>
    
-    <div class="warpper">
-    <from action="">
-    <h1>login</h1> 
-
-     <div class="input-box">
-        <input type="text"name="username" placeholder="Username" required>
-     </div> 
-
-     <div class="input-box">
-        <input type="password"name="password"placeholder="Password" required>
-     </div>
-
-     <div class="remember-forget">
-        <label> <input type="checkbox"> Remember me </label>
-        <a href="#">Forget password</a>
-     </div>
-
-    <button type="submit" class="btn">Login</button>
+  <div class="warpper">
+    <div class="form-warpper sign-in">
+        <form action="">
+            <h2>Login</h2>
 
 
-     <div class="register-link">
-       <p> Don't have an account?
-      <a href="#"> register</a></p>
-     </div>
+            <div class="input-group">
+                <input type="text" required>
+                <label for="">Username</label>
+            </div>
+
+
+            <div class="input-group">
+                <input type="password" required>
+                <label for="">Password</label>
+            </div>
+
+
+            <div class="remember">
+                <label for="">
+                    <input type="checkbox"> Remember me
+                </label>
+            </div>
+            
+            <button type="submit">Login</button>
+
+
+            <div class="signUp-link">
+                <p>Don't have an account?
+                    <a href="#" class="signUpBtn-link">Sign Up</a>
+                </p>
+            </div>
+        </form>
+    </div>
+</div>
      <from>
 
 
