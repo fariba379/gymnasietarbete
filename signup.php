@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>signUp Form</title>
      <link rel="stylesheet" href="css/styls.css">
+  
 </head>
-<body>
+<body class="loginBild">
+
 
     <div class="warpper">
        <div class="form-warpper sign-up">
@@ -17,7 +19,7 @@
                     <input type="text" required>
                     <label for="">Username</label>
                 </div>
-                
+
                 <div class="input-group">
                     <input type="text" required>
                     <label for="">Name</label>
@@ -43,12 +45,12 @@
                     </label>
                 </div>
 
-                <button type="submit">Register</button>
+                <button  class="btn-login" type="submit">Register</button>
 
              <div class="signUp-link">
               <p>
                Already have an account?
-              <a href="#" class="signInBtn-link">Login</a>
+              <a href="./login.php" class="signInBtn-link">Login</a>
               </p>
              </div>
 

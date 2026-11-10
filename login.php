@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>login</title>
     <link rel="stylesheet" href="css/styls.css">
+
 </head>
-<body>
+<body class="loginBild">
    
   <div class="warpper">
     <div class="form-warpper sign-in">
@@ -33,12 +34,12 @@
                 </label>
             </div>
             
-            <button type="submit">Login</button>
+            <button class="btn-login" type="submit">Login</button>
 
 
             <div class="signUp-link">
                 <p>Don't have an account?
-                    <a href="#" class="signUpBtn-link">Sign Up</a>
+                 <a href="./signup.php" class="signUpBtn-link">Sign Up</a>
                 </p>
             </div>
         </form>
@@ -49,24 +50,6 @@
 
 </body>
 </html>
-<?php
-require_once 'assets/functions.php';
-session_start();
-if(isset($_POST['submit'])){
-$username = $_POST['username'];
-$password = $_POST['password'];
-  
- if (login($username, $password)) {
-        $_SESSION['username'] = $username;
-        $_SESSION['password'] = $password;
-        header('Location: index.php');
-        exit();
-    }
-    else
-    { 
-        echo "Invalid username or password";
-   }
-}
-    ?>
+
 
 
