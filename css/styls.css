@@ -270,8 +270,6 @@ body.index-page {
     border: 1px solid white;
 }
 
-```css
-/* HOMEPAGE */
 
 body.index-page {
     display: block;
@@ -397,7 +395,193 @@ body.index-page {
     font-weight: bold;
     border-radius: 5 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
 
+body {
+    min-height: 100vh;
+    background-image:
+        linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.8)),
+        url("../bild/Mercedes AMG 1.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+}
+
+/* NAVIGATION */
+
+.navbar {
+    width: 100%;
+    padding: 20px 30px;
+    background: rgb(70, 10, 20);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.nav-logo {
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.nav-logo span {
+    color: red;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.navbar ul li a:hover {
+    color: red;
+}
+
+/* HOMEPAGE */
+
+.hero {
+    text-align: center;
+    padding: 180px 20px;
+}
+
+.hero h1 {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.button {
+    display: inline-block;
+    padding: 14px 30px;
+    background: darkred;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background: red;
+}
+
+/* CONTENT */
+
+.content {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 30px;
+    background: rgba(20, 10, 10, 0.85);
+    border-radius: 10px;
+}
+
+.content h1 {
+    text-align: center;
+    color: #d5ad65;
+    margin-bottom: 30px;
+    font-size: 35px;
+}
+
+.content h2 {
+    color: #d5ad65;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.content p {
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+/* GALLERY */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* CONTACT FORM */
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 500px;
+    margin: 30px auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background: #eee;
+}
+
+.contact-form button {
+    padding: 13px;
+    background: darkred;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background: red;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar ul {
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .content {
+        margin: 25px 15px;
+    }
+}
 
 
 

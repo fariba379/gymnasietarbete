@@ -36,10 +36,8 @@
     <h2>WELCOME TO M$F RACING</h2>
     <p>Feel the speed. Live the passion. Drive beyond limits.</p>
 
-    <div class="buttons">
-        <a href="login.php" class="login-btn">Login</a>
-        <a href="signup.php" class="signup-btn">Sign Up</a>
-    </div>
+
+    
 </div>
 
 </body>
