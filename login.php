@@ -1,6 +1,11 @@
+
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 session_start();
-require "config.php";
+require_once __DIR__ . "/assets/config/db.php";
 
 $error = "";
 
@@ -9,78 +14,104 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = trim($_POST["username"] ?? "");
     $password = $_POST["password"] ?? "";
 
-    $sql = "SELECT * FROM users WHERE username = :username";
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute([
-        ":username" => $username
-    ]);
+    try {
 
-    $user = $stmt->fetch(PDO::FETCH_ASSOC);
+        $sql = "SELECT * FROM user WHERE username = :username";
 
-    if ($user && password_verify($password, $user["password"])) {
+        $stmt = $pdo->prepare($sql);
 
-        session_regenerate_id(true);
+        $stmt->execute([
+            ":username" => $username
+        ]);
 
-        $_SESSION["user_id"] = $user["id"];
-        $_SESSION["username"] = $user["username"];
-        $_SESSION["name"] = $user["name"];
+        $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
-        header("Location: index.php");
-        exit;
+        if ($user && password_verify($password, $user["password"])) {
 
-    } else {
-        $error = "Wrong username or password!";
+            session_regenerate_id(true);
+
+            $_SESSION["user_id"] = $user["id"];
+            $_SESSION["username"] = $user["username"];
+            $_SESSION["name"] = $user["name"];
+
+            header("Location: homepage.php");
+            exit;
+
+        } else {
+            $error = "Wrong username or password!";
+        }
+
+    } catch (PDOException $e) {
+
+        die("Database error: " . htmlspecialchars($e->getMessage()));
     }
 }
 ?>
- <!DOCTYPE html>
+
+
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>login</title>
+
+    <title>Login</title>
+
     <link rel="stylesheet" href="css/styls.css">
-
 </head>
+
 <body class="loginBild">
-   
-  <div class="warpper">
-    <div class="form-warpper sign-in">
-        <form action="">
-            <h2>Login</h2>
 
+    <div class="warpper">
 
-            <div class="input-group">
-                <input type="text" required>
-                <label for="">Username</label>
-            </div>
+        <div class="form-warpper sign-in">
 
+            <form action="login.php" method="POST">
 
-            <div class="input-group">
-                <input type="password" required>
-                <label for="">Password</label>
-            </div>
+                <h2>Login</h2>
 
+                <div class="input-group">
+                    <input type="text" name="username" required>
+                    <label>Username</label>
+                </div>
 
-            <div class="remember">
-                <label for="">
-                    <input type="checkbox"> Remember me
-                </label>
-            </div>
-            
-            <button class="btn-login" type="submit">Login</button>
+                <div class="input-group">
+                    <input type="password" name="password" required>
+                    <label>Password</label>
+                </div>
 
+                <div class="remember">
+                    <label>
+                        <input type="checkbox" name="remember">
+                        Remember me
+                    </label>
+                </div>
 
-            <div class="signUp-link">
-                <p>Don't have an account?
-                 <a href="./signup.php" class="signUpBtn-link">Sign Up</a>
-                </p>
-            </div>
-        </form>
+                <button class="btn-login" type="submit">
+                    Login
+                </button>
+
+                <?php if (!empty($error)): ?>
+                    <p style="color: red;">
+                        <?= htmlspecialchars($error) ?>
+                    </p>
+                <?php endif; ?>
+
+                <div class="signUp-link">
+                    <p>
+                        Don't have an account?
+                        <a href="./signup.php" class="signUpBtn-link">
+                            Sign Up
+                        </a>
+                    </p>
+                </div>
+
+            </form>
+
+        </div>
+
     </div>
-</div>
-     <from>
-
 
 </body>
 </html>
