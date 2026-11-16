@@ -11,10 +11,9 @@
 
 <body class="loginBild index-page">
 
-    <!-- LOGO -->
+
     <h1 class="logo">M<span>&</span>F</h1>
 
-    <!-- MAIN CONTENT -->
     <div class="btn-index">
 
         <h2>WELCOME TO M$F RACING</h2>
