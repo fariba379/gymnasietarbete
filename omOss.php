@@ -23,7 +23,7 @@
 <main class="content">
     <h1>Om oss</h1>
 
-    <p>Välkommen till M&F Racing!</p>
+    <p>Välkommen till M&F Racing Cars!</p>
 
     <p>Vi har skapat den här hemsidan för att dela vårt intresse
     för bilar, motorsport och racing.</p>

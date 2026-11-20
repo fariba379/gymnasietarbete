@@ -58,7 +58,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <title>Login</title>
 
-    <link rel="stylesheet" href="css/styls.css">
+    <link rel="stylesheet" href="css/loginochsignup_stylas.css">
 </head>
 
 <body class="loginBild">

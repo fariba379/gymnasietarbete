@@ -1,22 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>M$F Racing</title>
+    <title>M&F Racing</title>
 
-    <link rel="stylesheet" href="css/styls.css">
+    <link rel="stylesheet" href="css/index_stylas.css">
 </head>
 
-<body class="loginBild index-page">
-
+<body class="index-page">
 
     <h1 class="logo">M<span>&</span>F</h1>
 
     <div class="btn-index">
-
-        <h2>WELCOME TO M$F RACING</h2>
+        <h2>WELCOME TO M&F RACING</h2>
 
         <p>
             Feel the speed. Live the passion.
@@ -24,13 +22,9 @@
         </p>
 
         <div class="buttons">
-
             <a href="login.php" class="login-btn">Login</a>
-
             <a href="signup.php" class="signup-btn">Sign Up</a>
-
         </div>
-
     </div>
 
 </body>

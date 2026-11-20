@@ -1,4 +1,4 @@
-```html
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,13 +16,13 @@
         <div class="nav-logo">M<span>$</span>F RACING</div>
 
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="cars.html">Cars</a></li>
-            <li><a href="racing.html">Racing</a></li>
-            <li><a href="news.html">News</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="cars.php">Cars</a></li>
+            <li><a href="racing.php">Racing</a></li>
+            <li><a href="news.php">News</a></li>
+            <li><a href="gallery.php">Gallery</a></li>
+            <li><a href="omOss.php">omOss</a></li>
+            <li><a href="kontaktaOss.php">Contact</a></li>
+            <li><a href="bokningar.php">Booking</a></li>
         </ul>
 
        <div class="nav-login">
@@ -31,10 +31,9 @@
     </nav>
 
     <div class="btn-index">
-        <h2>WELCOME TO M$F RACING</h2>
+        <h2>WELCOME TO M$F RACING CARS</h2>
         <p>Feel the speed. Live the passion. Drive beyond limits.</p>
     </div>
 
 </body>
 </html>
-```
