@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>M&F booking</title>
-    <link rel="stylesheet" href="css/styls.css">
+    <link rel="stylesheet" href="css/bokningar_stylas.css">
 </head>
 
 <body>

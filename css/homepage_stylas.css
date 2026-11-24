@@ -1,0 +1,546 @@
+/* =========================
+   GRUNDINSTÄLLNINGAR
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body.index-page {
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    color: white;
+    background: #080808;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.index-page .navbar {
+    width: 100%;
+    min-height: 85px;
+    padding: 15px 40px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: rgba(55, 8, 8, 0.97);
+    border-bottom: 2px solid #800020;
+
+    position: relative;
+    z-index: 100;
+}
+
+/* LOGO */
+
+.index-page .nav-logo {
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    white-space: nowrap;
+}
+
+.index-page .nav-logo span {
+    color: #c62845;
+}
+
+/* MENY */
+
+.index-page .navbar ul {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.index-page .navbar ul li a {
+    color: white;
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.index-page .navbar ul li a:hover {
+    color: #e63958;
+}
+
+/* LOG OUT */
+
+.index-page .nav-login a {
+    display: inline-block;
+
+    padding: 11px 22px;
+
+    color: white;
+    background: #800020;
+
+    border: 1px solid #a52a45;
+    border-radius: 6px;
+
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.index-page .nav-login a:hover {
+    background: white;
+    color: #800020;
+}
+
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+    min-height: 90vh;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.75)
+        ),
+        url("../bild/Mercedes AMG 1.jpeg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* HERO TEXT */
+
+.index-page .btn-index {
+    width: 90%;
+    text-align: center;
+}
+
+.index-page .btn-index h2 {
+    color: white;
+
+    font-size: clamp(30px, 5vw, 55px);
+    font-weight: bold;
+
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+
+    text-shadow: 2px 2px 10px black;
+}
+
+.index-page .btn-index p {
+    color: #eeeeee;
+
+    font-size: 18px;
+    letter-spacing: 1px;
+
+    text-shadow: 2px 2px 8px black;
+}
+
+/* HERO BUTTON */
+
+.hero-btn {
+    display: inline-block;
+
+    margin-top: 30px;
+    padding: 14px 30px;
+
+    color: white;
+    background: #800020;
+
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.hero-btn:hover {
+    background: white;
+    color: #800020;
+}
+
+
+/* SCROLL DOWN */
+
+.scroll-down {
+    position: absolute;
+    bottom: 25px;
+
+    text-align: center;
+}
+
+.scroll-down a {
+    color: white;
+    text-decoration: none;
+
+    font-size: 14px;
+    letter-spacing: 2px;
+
+    transition: 0.3s;
+}
+
+.scroll-down a:hover {
+    color: #e63958;
+}
+
+
+/* =========================
+   ABOUT SECTION
+========================= */
+
+.about {
+    min-height: 350px;
+    padding: 90px 10%;
+
+    text-align: center;
+    background: #111111;
+}
+
+.about h2 {
+    color: #c62845;
+    font-size: 35px;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+.about p {
+    max-width: 750px;
+    margin: auto;
+
+    color: #cccccc;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+
+/* =========================
+   CARS SECTION
+========================= */
+
+.cars-section {
+    padding: 90px 8%;
+
+    text-align: center;
+    background: #1a080c;
+}
+
+.cars-section h2 {
+    color: #c62845;
+    font-size: 35px;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+.cars-section > p {
+    color: #cccccc;
+    font-size: 17px;
+}
+
+/* CARS CONTAINER */
+
+.cars-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+
+    gap: 30px;
+    flex-wrap: wrap;
+
+    margin-top: 45px;
+}
+
+/* CAR CARDS */
+
+.car-card {
+    width: 260px;
+    padding: 35px 25px;
+
+    background: #222222;
+
+    border: 1px solid #800020;
+    border-radius: 10px;
+
+    transition: 0.3s;
+}
+
+.car-card:hover {
+    transform: translateY(-10px);
+    border-color: #e63958;
+
+    box-shadow: 0 10px 25px rgba(128, 0, 32, 0.3);
+}
+
+.car-card h3 {
+    color: white;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.car-card p {
+    color: #cccccc;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.car-card a {
+    display: inline-block;
+
+    margin-top: 20px;
+
+    color: #e63958;
+    text-decoration: none;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.car-card a:hover {
+    color: white;
+}
+
+
+/* =========================
+   RACING SECTION
+========================= */
+
+.racing-section {
+    min-height: 400px;
+    padding: 110px 10%;
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.75),
+            rgba(0, 0, 0, 0.85)
+        ),
+        url("../bild/Mercedes AMG 1.jpeg");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.racing-section h2 {
+    color: #c62845;
+    font-size: 35px;
+    margin-bottom: 25px;
+}
+
+.racing-section p {
+    max-width: 750px;
+
+    color: #cccccc;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.section-btn {
+    display: inline-block;
+
+    margin-top: 25px;
+    padding: 14px 30px;
+
+    background: #800020;
+    color: white;
+
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.section-btn:hover {
+    background: white;
+    color: #800020;
+}
+
+
+/* =========================
+   BOOKING SECTION
+========================= */
+
+.booking-section {
+    padding: 100px 10%;
+
+    text-align: center;
+    background: #111111;
+}
+
+.booking-section h2 {
+    color: #c62845;
+    font-size: 35px;
+    margin-bottom: 25px;
+}
+
+.booking-section p {
+    color: #cccccc;
+    font-size: 17px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 40px 20px;
+
+    text-align: center;
+
+    background: #370808;
+    border-top: 2px solid #800020;
+}
+
+footer .nav-logo {
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+footer .nav-logo span {
+    color: #c62845;
+}
+
+footer p {
+    color: #aaaaaa;
+    margin: 10px;
+    font-size: 14px;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+   TABLETS
+========================= */
+
+@media (max-width: 900px) {
+
+    .index-page .navbar {
+        padding: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .index-page .navbar ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .index-page .navbar ul li a {
+        font-size: 14px;
+    }
+
+    .cars-container {
+        gap: 20px;
+    }
+
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+   MOBILES
+========================= */
+
+@media (max-width: 600px) {
+
+    .index-page .navbar {
+        flex-direction: column;
+        justify-content: center;
+        gap: 18px;
+    }
+
+    .index-page .nav-logo {
+        font-size: 23px;
+    }
+
+    .index-page .navbar ul {
+        gap: 12px;
+    }
+
+    .index-page .navbar ul li a {
+        font-size: 12px;
+    }
+
+    .hero {
+        min-height: 80vh;
+    }
+
+    .index-page .btn-index {
+        width: 95%;
+    }
+
+    .index-page .btn-index h2 {
+        font-size: 29px;
+        letter-spacing: 1px;
+    }
+
+    .index-page .btn-index p {
+        font-size: 14px;
+    }
+
+    .about,
+    .cars-section,
+    .racing-section,
+    .booking-section {
+        padding: 65px 20px;
+    }
+
+    .about h2,
+    .cars-section h2,
+    .racing-section h2,
+    .booking-section h2 {
+        font-size: 27px;
+    }
+
+    .cars-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .car-card {
+        width: 90%;
+    }
+
+    .racing-section {
+        background-attachment: scroll;
+    }
+
+}

@@ -1,0 +1,655 @@
+/* =========================
+   GENERAL SETTINGS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body.racing-page {
+    font-family: Arial, sans-serif;
+    background: #080808;
+    color: white;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.navbar {
+    width: 100%;
+    min-height: 85px;
+    padding: 15px 40px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: #26070d;
+    border-bottom: 2px solid #800020;
+
+    position: relative;
+    z-index: 100;
+}
+
+.nav-logo {
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    white-space: nowrap;
+}
+
+.nav-logo span {
+    color: #d62848;
+}
+
+.navbar ul {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+
+    list-style: none;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active {
+    color: #e63958;
+}
+
+.nav-login a {
+    display: inline-block;
+
+    padding: 11px 22px;
+
+    background: #800020;
+    color: white;
+
+    border: 1px solid #a52a45;
+    border-radius: 5px;
+
+    text-decoration: none;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.nav-login a:hover {
+    background: white;
+    color: #800020;
+}
+
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.racing-hero {
+    min-height: 650px;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    padding: 80px 10%;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,0.95),
+            rgba(0,0,0,0.65),
+            rgba(0,0,0,0.25)
+        ),
+        url("../bild/Mercedes AMG 1.jpeg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 750px;
+    animation: fadeUp 1s ease;
+}
+
+.hero-label,
+.section-label {
+    display: block;
+
+    color: #d62848;
+    font-size: 13px;
+    font-weight: bold;
+
+    letter-spacing: 4px;
+    margin-bottom: 25px;
+}
+
+.hero-content h1 {
+    font-size: clamp(55px, 8vw, 100px);
+    line-height: 0.95;
+
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+
+.hero-content h1 span {
+    color: #c62845;
+}
+
+.hero-content p {
+    max-width: 550px;
+
+    margin-top: 30px;
+
+    color: #dddddd;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+
+/* HERO BUTTON */
+
+.hero-btn {
+    display: inline-block;
+
+    margin-top: 35px;
+    padding: 16px 32px;
+
+    background: #800020;
+    border: 1px solid #a52a45;
+
+    color: white;
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+
+    transition: 0.3s;
+}
+
+.hero-btn:hover {
+    background: white;
+    color: #800020;
+
+    transform: translateY(-4px);
+}
+
+
+/* HERO BOTTOM */
+
+.hero-bottom {
+    position: absolute;
+
+    bottom: 25px;
+    left: 10%;
+    right: 10%;
+
+    display: flex;
+    justify-content: space-between;
+
+    color: #aaaaaa;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+
+/* =========================
+   INTRO SECTION
+========================= */
+
+.racing-intro {
+    min-height: 420px;
+
+    padding: 100px 12%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 40px;
+
+    background: #111111;
+}
+
+.intro-content {
+    max-width: 700px;
+}
+
+.intro-content h2 {
+    font-size: clamp(40px, 5vw, 65px);
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.intro-content h2 span {
+    color: #c62845;
+}
+
+.intro-content p {
+    max-width: 650px;
+
+    color: #bbbbbb;
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+.intro-number {
+    min-width: 180px;
+    text-align: center;
+}
+
+.intro-number span {
+    color: #800020;
+    font-size: 150px;
+    font-weight: 900;
+}
+
+.intro-number p {
+    color: white;
+    font-size: 14px;
+    letter-spacing: 4px;
+}
+
+
+/* =========================
+   RACING CATEGORIES
+========================= */
+
+.racing-categories {
+    padding: 100px 8%;
+
+    background: #0a0a0a;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-heading h2 {
+    font-size: clamp(35px, 5vw, 55px);
+    margin-bottom: 20px;
+}
+
+.section-heading h2 span {
+    color: #c62845;
+}
+
+.section-heading p {
+    color: #aaaaaa;
+    font-size: 16px;
+}
+
+
+/* RACING GRID */
+
+.racing-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+/* RACING CARDS */
+
+.racing-card {
+    min-height: 400px;
+
+    display: flex;
+    align-items: flex-end;
+
+    position: relative;
+    overflow: hidden;
+
+    background-size: cover;
+    background-position: center;
+
+    border: 1px solid #3b111b;
+
+    transition: 0.4s;
+}
+
+.track-card {
+    background-image:
+        linear-gradient(transparent, rgba(0,0,0,0.95)),
+        url("../bild/Mercedes AMG 1.jpeg");
+}
+
+.sports-card {
+    background-image:
+        linear-gradient(transparent, rgba(0,0,0,0.95)),
+        url("../bild/Mercedes AMG 1.jpeg");
+}
+
+.motor-card {
+    background-image:
+        linear-gradient(transparent, rgba(0,0,0,0.95)),
+        url("../bild/Mercedes AMG 1.jpeg");
+}
+
+.racing-card:hover {
+    transform: translateY(-10px);
+    border-color: #c62845;
+}
+
+.card-content {
+    padding: 30px;
+}
+
+.card-content span {
+    color: #e63958;
+
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.card-content h3 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+    font-size: 25px;
+}
+
+.card-content p {
+    color: #cccccc;
+
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.card-content a {
+    display: inline-block;
+
+    margin-top: 25px;
+
+    color: #e63958;
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+
+    transition: 0.3s;
+}
+
+.card-content a:hover {
+    color: white;
+}
+
+
+/* =========================
+   PERFORMANCE SECTION
+========================= */
+
+.performance-section {
+    min-height: 500px;
+
+    padding: 100px 10%;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,0.95),
+            rgba(0,0,0,0.55)
+        ),
+        url("../bild/Mercedes AMG 1.jpeg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.performance-content {
+    max-width: 650px;
+}
+
+.performance-content h2 {
+    font-size: clamp(45px, 6vw, 75px);
+    line-height: 1.1;
+}
+
+.performance-content h2 span {
+    color: #c62845;
+}
+
+.performance-content p {
+    margin-top: 25px;
+
+    color: #cccccc;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+/* =========================
+   BOOKING SECTION
+========================= */
+
+.racing-booking {
+    padding: 100px 20px;
+
+    text-align: center;
+
+    background: #20060b;
+}
+
+.racing-booking h2 {
+    font-size: clamp(30px, 5vw, 50px);
+    margin-bottom: 25px;
+}
+
+.racing-booking h2 span {
+    color: #e63958;
+}
+
+.racing-booking p {
+    color: #cccccc;
+    font-size: 16px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    padding: 50px 20px 20px;
+
+    text-align: center;
+
+    background: #080808;
+    border-top: 2px solid #800020;
+}
+
+.footer-logo {
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.footer-logo span {
+    color: #c62845;
+}
+
+.footer > p {
+    margin-top: 15px;
+
+    color: #999999;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+
+    flex-wrap: wrap;
+    gap: 30px;
+
+    margin: 35px 0;
+}
+
+.footer-links a {
+    color: #bbbbbb;
+    text-decoration: none;
+
+    font-size: 13px;
+
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #e63958;
+}
+
+.footer-bottom {
+    padding-top: 20px;
+
+    border-top: 1px solid #333333;
+
+    color: #777777;
+    font-size: 12px;
+}
+
+
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================
+   TABLET RESPONSIVE
+========================= */
+
+@media (max-width: 1000px) {
+
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .navbar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .racing-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .intro-number span {
+        font-size: 110px;
+    }
+
+}
+
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .navbar ul {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .navbar ul li a {
+        font-size: 12px;
+    }
+
+    .racing-hero {
+        min-height: 600px;
+        padding: 60px 25px;
+    }
+
+    .hero-content h1 {
+        font-size: 55px;
+    }
+
+    .hero-content p {
+        font-size: 15px;
+    }
+
+    .hero-bottom {
+        left: 25px;
+        right: 25px;
+        font-size: 9px;
+    }
+
+    .racing-intro {
+        padding: 70px 25px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .intro-number span {
+        font-size: 100px;
+    }
+
+    .racing-categories {
+        padding: 70px 20px;
+    }
+
+    .racing-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .racing-card {
+        min-height: 350px;
+    }
+
+    .performance-section {
+        padding: 80px 25px;
+    }
+
+    .racing-booking {
+        padding: 75px 20px;
+    }
+
+}

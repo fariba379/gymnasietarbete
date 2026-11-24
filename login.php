@@ -1,10 +1,12 @@
 
 <?php
+// Det vissar att felmeddelanden om något går fel
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-
+// starta en sesstion så att användaren kan vara inloggad
 session_start();
+// kopplar till databasen
 require_once __DIR__ . "/assets/config/db.php";
 
 $error = "";

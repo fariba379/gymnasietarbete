@@ -1,36 +1,69 @@
 <!DOCTYPE html>
-<html lang="sv">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - M&F Racing</title>
-    <link rel="stylesheet" href="css/styls.css">
+    <link rel="stylesheet" href="css/omOss_stylas.css">
 </head>
+
 <body class="site-page">
 
 <nav class="navbar">
     <div class="nav-logo">M<span>&</span>F RACING</div>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="cars.html">Cars</a></li>
-        <li><a href="racing.html">Racing</a></li>
-        <li><a href="news.html">News</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
+
+    
+        <nav>
+            <a href="index.php">Home</a>
+            <a href="cars.php">Our Cars</a>
+            <a href="racing.php">Racing</a>
+            <a href="kontaktaOss.php">Contact</a>
+            <a href="bokningar.php">Booking</a>
+        </nav>
 </nav>
 
 <main class="content">
-    <h1>Om oss</h1>
 
-    <p>Välkommen till M&F Racing Cars!</p>
+    <h1>About Us</h1>
 
-    <p>Vi har skapat den här hemsidan för att dela vårt intresse
-    för bilar, motorsport och racing.</p>
+    <p>Welcome to M&F Racing Cars!</p>
 
-    <h2>Vårt syfte</h2>
-    <p>Vi vill informera och inspirera personer som är intresserade
-    av bilar och motorsport.</p>
+    <p>
+        We created this website to share our passion for cars,
+        motorsports and racing. Here, visitors can discover
+        different car brands, learn more about racing and explore
+        exciting cars.
+    </p>
+
+    <h2>Who Are We?</h2>
+
+    <p>
+        We are two people who share a strong interest in cars
+        and motorsports. Through M&F Racing, we want to bring
+        together information, pictures and news about the
+        automotive world in one place.
+    </p>
+
+    <h2>Our Purpose</h2>
+
+    <p>
+        Our goal is to inform and inspire people who are
+        interested in cars and motorsports. We want to create
+        a website where both beginners and car enthusiasts
+        can find interesting information.
+    </p>
+
+    <h2>Our Passion for Cars</h2>
+
+    <p>
+        Cars are not just about transportation. They are also
+        about design, technology, performance and innovation.
+        Motorsport shows how much technology, teamwork and
+        skill are involved in racing.
+    </p>
+
+
 </main>
 
 </body>

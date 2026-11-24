@@ -1,0 +1,395 @@
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    color: #101d2c;
+    background: #ffffff;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* HEADER */
+
+.topbar {
+    min-height: 78px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffffff;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.06);
+}
+
+.logo {
+    font-family: 'Manrope', sans-serif;
+    font-size: 23px;
+    font-weight: 800;
+    color: #171717;
+}
+
+.logo span {
+    color: #800020;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: #333;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #800020;
+}
+
+.nav-button {
+    padding: 12px 20px;
+    background: #800020;
+    color: white;
+    border-radius: 7px;
+    font-weight: 700;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.nav-button:hover {
+    background: #570016;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 520px;
+    padding: 100px 10%;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(
+        110deg,
+        #f4f5f8,
+        #e7eaf0,
+        #dce1eb
+    );
+}
+
+.hero-content {
+    max-width: 550px;
+}
+
+.eyebrow {
+    color: #800020;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(40px, 5vw, 62px);
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #800020;
+}
+
+.hero-text {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+/* BUTTONS */
+
+.primary-button {
+    display: inline-block;
+    padding: 15px 23px;
+    background: #800020;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.primary-button:hover {
+    background: #570016;
+    transform: translateY(-2px);
+}
+
+/* SECTION HEADINGS */
+
+.section-heading {
+    margin-bottom: 30px;
+}
+
+.section-heading h2 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.section-heading p {
+    color: #777;
+    font-size: 14px;
+}
+
+/* SEARCH SECTION */
+
+.search-section {
+    padding: 85px 10%;
+}
+
+.search-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr auto;
+    align-items: end;
+    gap: 18px;
+    padding: 25px;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+input,
+select {
+    width: 100%;
+    min-height: 45px;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    background: white;
+    color: #333;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+input:focus,
+select:focus {
+    outline: 2px solid #800020;
+    border-color: #800020;
+}
+
+/* CARS SECTION */
+
+.cars-section {
+    padding: 85px 10%;
+    background: #f5f6f8;
+}
+
+.car-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.car-card {
+    overflow: hidden;
+    background: white;
+    border-radius: 12px;
+    border: 1px solid #e5e5e5;
+    transition: 0.3s;
+}
+
+.car-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.10);
+}
+
+.car-visual {
+    height: 190px;
+    background: linear-gradient(135deg, #e2e5eb, #aeb6c5);
+    position: relative;
+}
+
+.car-one {
+    background: linear-gradient(135deg, #dce3ed, #9ca9bb);
+}
+
+.car-two {
+    background: linear-gradient(135deg, #e8e8e8, #b8bdc7);
+}
+
+.car-three {
+    background: linear-gradient(135deg, #dce7eb, #a7b8c0);
+}
+
+.car-info {
+    padding: 22px;
+}
+
+.car-info h3 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 20px;
+    margin-bottom: 9px;
+}
+
+.car-info p {
+    color: #777;
+    font-size: 13px;
+    margin-bottom: 18px;
+}
+
+.car-info strong {
+    display: block;
+    color: #800020;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.car-info a {
+    display: inline-block;
+    color: #800020;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.car-info a:hover {
+    color: #333;
+}
+
+/* BOOKING SECTION */
+
+.booking-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 60px;
+    padding: 85px 10%;
+    background: #f0f1f4;
+}
+
+.booking-section h2 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.booking-section > div p {
+    color: #666;
+    line-height: 1.7;
+    font-size: 15px;
+}
+
+.booking-form {
+    display: grid;
+    gap: 18px;
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.07);
+}
+
+.booking-form .primary-button {
+    width: 100%;
+    margin-top: 5px;
+}
+
+/* FOOTER */
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 35px 10%;
+    background: #171717;
+    color: white;
+}
+
+footer .logo {
+    color: white;
+}
+
+footer p {
+    font-size: 12px;
+    color: #bbb;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 900px) {
+    .search-card {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .car-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .booking-section {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    .topbar {
+        flex-direction: column;
+        gap: 18px;
+        padding: 20px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero {
+        min-height: 430px;
+        padding: 70px 7%;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .search-section,
+    .cars-section,
+    .booking-section {
+        padding: 55px 7%;
+    }
+
+    .search-card,
+    .car-grid,
+    .booking-section {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
